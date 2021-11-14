@@ -23,6 +23,11 @@ header {
     width: 100vw;
     background-color: rgba(179, 104, 86, 0.66);
 }
+.indexx {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
 .cantCartItem {
     display: flex;
     flex-flow: row nowrap;

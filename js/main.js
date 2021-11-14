@@ -7,7 +7,7 @@ const total = document.getElementById("total");
 const burgerIcon = document.querySelector(".brgIcon");
 const links = document.querySelector(".menuLinks");
 const barrs = document.querySelectorAll(".brgIcon span");
-
+localStorage.setItem("cart", JSON.stringify(cartArr));
 let totalCart = 0;
 
 function modeloAro(name, price, img) {
@@ -33,11 +33,11 @@ function cartClass() {
 // Arrays
 const aros = [];
 // Precio de cada arito llamado por el nombre de modelo
-const grata = new modeloAro("Grata", 750, "./assets/Grata.webp");
-const mirna = new modeloAro("Mirna", 350, "./assets/Mirna.webp");
-const ines = new modeloAro("Ines", 600, "./assets/Ines.webp");
-const acucia = new modeloAro("Acucia", 500, "./assets/Acucia.webp");
-const sulpicia = new modeloAro("Sulpicia", 550, "./assets/Sulpicia.webp");
+const grata = new modeloAro("Grata", 750, "./../assets/Grata.webp");
+const mirna = new modeloAro("Mirna", 350, "./../assets/Mirna.webp");
+const ines = new modeloAro("Ines", 600, "./../assets/Ines.webp");
+const acucia = new modeloAro("Acucia", 500, "./../assets/Acucia.webp");
+const sulpicia = new modeloAro("Sulpicia", 550, "./../assets/Sulpicia.webp");
 // Push Arrays
 aros.push(grata);
 aros.push(mirna);
@@ -82,13 +82,13 @@ function localCart() {
                                     <p>${data.name}</p>
                                     <p>$${data.price}</p>
                                     <div class="cantCartItem">
-                                        <img src="./assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
+                                        <img src="./../assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
                                         <p id="cant${i}" style="margin:0">${data.cant}</p>
-                                        <img src="./assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
+                                        <img src="./../assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="./assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
+                                    <img src="./../assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
                                 </div>
                             </div>
         `;
@@ -118,13 +118,13 @@ function addCart(name, price, img) {
                                     <p>${data.name}</p>
                                     <p>$${data.price}</p>
                                     <div class="cantCartItem">
-                                        <img src="./assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
+                                        <img src="./../assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
                                         <p id="cant${i}" style="margin:0">${data.cant}</p>
-                                        <img src="./assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
+                                        <img src="./../assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="./assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
+                                    <img src="./../assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
                                 </div>
                             </div>
             `;
@@ -146,13 +146,13 @@ function addCart(name, price, img) {
                                     <p>${data.name}</p>
                                     <p>$${data.price}</p>
                                     <div class="d-flex justify-content-center align-items-center">
-                                        <img src="./assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
+                                        <img src="./../assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
                                         <p id="cant${i}" style="margin:0">${data.cant}</p>
-                                        <img src="./assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
+                                        <img src="./../assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="./assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
+                                    <img src="./../assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
                                 </div>
                             </div>
                 `;
@@ -183,13 +183,13 @@ function removeCart(el) {
                                     <p>${data.name}</p>
                                     <p>$${data.price}</p>
                                     <div class="d-flex justify-content-center align-items-center">
-                                        <img src="./assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
+                                        <img src="./../assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
                                         <p id="cant${i}" style="margin:0">${data.cant}</p>
-                                        <img src="./assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
+                                        <img src="./../assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="./assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
+                                    <img src="./../assets/remove.png" width="35px" onclick="removeCart(${i})" style="cursor:pointer;">
                                 </div>
                             </div>
             `;
