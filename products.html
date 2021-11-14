@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <header>
+        <!-- Burger Menu -->
+        <nav>
+            <button class="brgIcon" type="button">
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>
+            <!-- Menu List -->
+            <ul class="menuLinks">
+                <a href="./index.html">Home</a>
+                <a href="./products.html">Productos</a>
+                <a href="#">Galería</a>
+                <a href="#">Nosotras</a>
+                <a href="#">Contacto</a>
+            </ul>
+        </nav>
+        <!-- Logo -->
+        <div>
+            <a href="#"><img class="logo icon" src="./assets/logo.png" alt="Logo" /></a>
+        </div>
+        <!-- Cart Icon -->
+        <div class="icon">
+            <img
+                src="./assets/carrito-de-compras.png"
+                alt=""
+                width="40px"
+                onclick="displayCart()"
+                style="cursor: pointer"
+            />
+        </div>
+    </header>
+    <body>
+        <div class="container-fluid padding">
+            <div class="row">
+                <div
+                    class="col-12 d-flex justify-content-start align-items-center flex-wrap"
+                    id="products"
+                ></div>
+            </div>
+        </div>
+
+        <div class="cart" style="display: none">
+            <div class="d-flex justify-content-end align-items-center w-100">
+                <img
+                    src="./assets/cancel.png"
+                    alt=""
+                    width="25px"
+                    onclick="displayCart()"
+                    style="cursor: pointer"
+                />
+            </div>
+            <div id="cart" class="list-prod"></div>
+            <div class="total" id="total"></div>
+            <div><button class="btn btn-light" id="btnCompra">Comprar</button></div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

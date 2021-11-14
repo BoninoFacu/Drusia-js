@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100vw;
+    background-color: rgba(179, 104, 86, 0.66);
+}
+.cantCartItem {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.cartimg {
+    width: 50px;
+    height: 50px;
+    transition: 0.3s all;
+}
+.cartimg:hover {
+    transform: scale(1.2);
+}
+
+.icon {
+    cursor: pointer;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+}
+nav .brgIcon {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s all;
+}
+nav .brgIcon:hover {
+    transform: scale(1.2);
+}
+nav .br-1.animate {
+    transform: rotate(45deg) translate(15px, 4px);
+    background-color: #ad393b;
+}
+nav .br-2.animate {
+    opacity: 0;
+}
+nav .br-3.animate {
+    transform: rotate(-45deg) translate(14px, -4px);
+    background-color: #ad393b;
+}
+nav span {
+    background-color: black;
+    height: 3px;
+    width: 28px;
+    margin: 5px auto;
+    border-radius: 2px;
+    transition: 0.5s all;
+    border: none;
+}
+
+.menuLinks {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 5vh;
+    width: 100vw;
+    background-color: #b36856;
+    display: none;
+    opacity: 0;
+    transition: 350ms all;
+}
+.menuLinks.activate {
+    display: flex;
+    opacity: 1;
+    animation: menuShow 350ms ease-in-out both;
+}
+.menuLinks a {
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    width: 20%;
+}
+.menuLinks a:hover {
+    background-color: #ad393b;
+}
+.menuLinks a a {
+    font-size: 1rem;
+}
+
+@keyframes menuShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.heroIndex {
+    width: 99.11vw;
+    height: 99.8vh;
+    max-height: 100%;
+    background-image: url(./../assets/land.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.heroIndex .mainContIndex {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    background: rgba(159, 70, 128, 0.18);
+}
+.heroIndex .contentMain {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #8a3839a4;
+    width: 100%;
+    box-shadow: 0px 0px 114px 118px #8a3839a4;
+}
+.heroIndex .contentMain h1 {
+    font-size: calc(1.5rem + 1.1vw);
+    font-weight: bold;
+}
+.heroIndex .contentMain span {
+    font-size: calc(0.5rem + 1.1vw);
+    font-weight: 500;
+}
+
+body {
+    background: rgb(240, 210, 209);
+}
+
+p {
+    font-size: 1rem;
+}
+
+.padding {
+    padding: 0 8rem;
+}
+
+.padding-menu {
+    padding: 2rem 8rem;
+}
+
+.product {
+    width: 23%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 1%;
+    background: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.015);
+    transition: 0.2s ease-in-out;
+}
+
+.formButton {
+    width: 100px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: rgb(241, 193, 191);
+    box-shadow: 0 2px 0 rgb(173, 100, 97);
+    color: #141414;
+    transition: all 50ms;
+}
+
+.formButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 0px 0 rgb(41, 35, 28);
+}
+
+.cart {
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.list-prod {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prod-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod-cart > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prod-cart > div:nth-child(1),
+.prod-cart > div:nth-child(3) {
+    width: 30%;
+}
+
+.prod-cart > div:nth-child(2) {
+    width: 70%;
+}
+
+.total {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: unset 0 0 5px rgb(0, 0, 0);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #78673f;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #574a2e;
+}
+
+.modalVenta {
+    display: flex;
+
+    flex-flow: column;
+    position: fixed;
+    padding: 30px;
+    top: 58vh;
+    left: 41vw;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 200px;
+    text-align: center;
+    border: #141414;
+    background-color: #78673f;
+    color: burlywood;
+    border-radius: 20px;
+}
