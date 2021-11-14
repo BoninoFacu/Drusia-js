@@ -145,7 +145,7 @@ function addCart(name, price, img) {
                                 <div>
                                     <p>${data.name}</p>
                                     <p>$${data.price}</p>
-                                    <div class="d-flex justify-content-center align-items-center">
+                                    <div class="cantCartItem">
                                         <img src="./../assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
                                         <p id="cant${i}" style="margin:0">${data.cant}</p>
                                         <img src="./../assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
@@ -182,7 +182,7 @@ function removeCart(el) {
                                 <div>
                                     <p>${data.name}</p>
                                     <p>$${data.price}</p>
-                                    <div class="d-flex justify-content-center align-items-center">
+                                    <div class="cantCartItem">
                                         <img src="./../assets/menos.png" onclick="sub1ToCart(cant${i},${i})" width="25px" class="mr-2">
                                         <p id="cant${i}" style="margin:0">${data.cant}</p>
                                         <img src="./../assets/boton-mas.png" onclick="add1ToCart(cant${i},${i})" width="25px" class="ml-2">
